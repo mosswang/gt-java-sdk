@@ -35,7 +35,7 @@ public class StartCaptchaServlet extends HttpServlet {
 
 		String resStr = "{}";
 
-		if (gtSdk.preProcess() == 1) {
+		if (gtSdk.privatePreProcess() == 1) {
 			// gt server is in use
 			resStr = gtSdk.getSuccessPreProcessRes();
 			gtSdk.setGtServerStatusSession(request, 1);
